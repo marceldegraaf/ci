@@ -8,6 +8,7 @@ gem 'simple_form'
 gem 'rails_config', :git => 'git://github.com/masterkain/rails_config', :branch => 'patch-1' # <= Ruby 1.9.3 compatible version
 gem 'inherited_resources'
 gem 'friendly_id'
+gem 'state_machine'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
