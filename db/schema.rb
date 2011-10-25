@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111025173223) do
+ActiveRecord::Schema.define(:version => 20111025175430) do
+
+  create_table "builds", :force => true do |t|
+    t.string   "build_directory"
+    t.boolean  "triggered_by_commit",  :default => true
+    t.string   "commit_creator_name"
+    t.string   "commit_creator_email"
+    t.string   "commit_hash"
+    t.string   "state"
+    t.boolean  "success"
+    t.integer  "project_id"
+    t.datetime "finished_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "name"
